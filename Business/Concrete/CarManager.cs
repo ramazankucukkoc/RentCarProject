@@ -10,6 +10,8 @@ using DataAccess.Concrete.InMemory;
 using Entities.Concrete.DTOs;
 using Core.Entities.Utilities.Results;
 using Business.Constants;
+using Business.ValidationsRules.FluentValidation;
+using Core.Aspects.Autofac.Validation;
 
 namespace Business.Concrete
 {
@@ -21,14 +23,10 @@ namespace Business.Concrete
         {
             _carsDal = cars;
         }
-
+        [ValidationAspect(typeof(CarValidator))]
         public IResult Add(Car car)
         {
-            if (car.Description.Length < 2)
-            {
-                //magic strings
-                return new ErrorResult(Messages.CarNameInvalid);
-            }
+            
             _carsDal.Add(car);
             return new SuccessResult("Ürün Eklendi");
         }
