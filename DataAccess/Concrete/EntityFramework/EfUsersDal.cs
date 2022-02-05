@@ -1,4 +1,5 @@
 ﻿using Core.DataAccess.Entityframework;
+using Core.Entities.Concrete;
 using DataAccess.Abstract;
 using Entities.Concrete;
 using System;
@@ -9,8 +10,8 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Concrete.EntityFramework
 {
-   public class EfUsersDal: EfEntityRepositoryBase<Users,CarContext>,IUsersDal
+    public class EfUsersDal : EfEntityRepositoryBase<Users, CarContext>, IUsersDal
     {
-
+       
     }
 }

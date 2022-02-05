@@ -3,10 +3,11 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Core.Entities.Business
+namespace Core.Utilities.Business
 {
    public class BusinessRules
     {
+        //params parametreleri array yapıp IResult[] arraya atıyor.
         public static IResult Run(params IResult[] logics)
         {
             foreach (var logic in logics)

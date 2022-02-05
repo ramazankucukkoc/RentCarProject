@@ -7,8 +7,8 @@ namespace Core.Entities.Utilities.Helpers.FileHelper
 {
    public interface IFileHelper
     {
-        string Upload(IFormFile file, string root);
-        void Delete(string filePath);
-        string Update(IFormFile file, string filePath, string root);
+      public  string Upload(IFormFile file, string root);
+      public  void Delete(string filePath);
+      public  string Update(IFormFile file, string filePath, string root);
     }
 }

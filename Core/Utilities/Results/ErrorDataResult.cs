@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Core.Entities.Utilities.Results
 {
-    public class ErrorDataResult<T> :DataResult<T>
+    public class ErrorDataResult<T> : DataResult<T>
     {
         public ErrorDataResult(T data, string message) : base(data, false, message)
         {
@@ -24,6 +24,5 @@ namespace Core.Entities.Utilities.Results
         {
 
         }
-        public T Data { get; }
     }
 }

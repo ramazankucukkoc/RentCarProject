@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Business.ValidationsRules.FluentValidation
 {
-   public class CarImagesValidator:AbstractValidator<CarImages>
+   public class CarImagesValidator:AbstractValidator<CarImage>
     {
         public CarImagesValidator()
         {
