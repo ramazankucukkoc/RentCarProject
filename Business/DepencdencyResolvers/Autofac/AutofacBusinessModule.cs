@@ -18,10 +18,12 @@ namespace Business.DepencdencyResolvers.Autofac
         {
 
             builder.RegisterType<CarManager>().As<ICarService>().SingleInstance();
-
             builder.RegisterType<EfCarDal>().As<ICarDal>().SingleInstance();
-            var assembly = System.Reflection.Assembly.GetExecutingAssembly();
 
+            builder.RegisterType<CarImageManager>().As<ICarImagesService>().SingleInstance();
+            builder.RegisterType<EfCarImagesDal>().As<ICarImagesDal>().SingleInstance();
+
+            var assembly = System.Reflection.Assembly.GetExecutingAssembly();
             builder.RegisterAssemblyTypes(assembly).AsImplementedInterfaces()
               .EnableInterfaceInterceptors(new ProxyGenerationOptions()
                {
